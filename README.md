@@ -39,15 +39,15 @@ Prior to running the tool, ensure that the IUDX SDK is installed on your compute
 ```console
 pip install git+https://github.com/datakaveri/iudx-python-sdk
 ```
+Once inside the directory where the repo was cloned, run:
+```console
+pip install .
+```
 ### Running the tool
 Clone the repo from:
 
 ``` console
 git clone https://github.com/novoneel-iudx/data-quality-assessment.git
-```
-Once inside the directory where the repo was cloned, run:
-```console
-pip install .
 ```
 
 ### Required libraries and packages
