@@ -269,15 +269,15 @@ def IAThist(df):
 #     n_bins = int((max_boundary - min_boundary) / desired_bin_size) + 1
 #     bins = np.linspace(min_boundary, max_boundary, n_bins)
 
-    bins = np.linspace(min(df['IAT'].dropna())-0.05*min(df['IAT'].dropna()), max(df['IAT'].dropna())+0.05*max(df['IAT'].dropna()), 10)
-    # bins = 100
+#     bins = np.linspace(min(df['IAT'].dropna())-0.05*min(df['IAT'].dropna()), max(df['IAT'].dropna())+0.05*max(df['IAT'].dropna()), 10)
+    bins = 10
     df['IAT'].dropna().plot.hist(bins = bins, edgecolor = 'k', alpha = 0.5, density = True) 
     # plt.xscale('log', 2)
     plt.xticks(rotation = 90)
     plt.xlabel('Inter Arrival Time [in seconds]')
     plt.ylabel('Normalized Frequency Of Occurence')
     plt.savefig('../plots/'+ df.name + 'IAThistPlot.png', bbox_inches = 'tight', transparent = True)
-    plt.show()
+#     plt.show()
     plt.close()
     return
 
@@ -305,7 +305,8 @@ def boxPlot(df, fileName, input1):
 def normalFitPlot(df):
     data = df['IAT'].dropna()
     mu, std = norm.fit(data) 
-    bins = np.linspace(min(data)-0.05*min(data), max(data)+0.05*max(data), 20)
+#     bins = np.linspace(min(data)-0.05*min(data), max(data)+0.05*max(data), 20)
+    bins = 10
     plt.hist(data, bins=bins, density=True, alpha=0.5, edgecolor='k', linewidth = 0.5, rwidth = 1)
 
     xmin, xmax = plt.xlim()
@@ -318,7 +319,7 @@ def normalFitPlot(df):
     plt.xlabel('Inter-Arrival Time')
     plt.ylabel('Frequency')
     # plt.savefig('../plots/'+ df.name + 'IATFitPlot.png', bbox_inches = 'tight', transparent = True)  
-    plt.show()
+#     plt.show()
     df[df['IAT'] != 0]
     df['IAT'].plot.kde()
     plt.close()
