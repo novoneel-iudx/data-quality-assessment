@@ -9,3 +9,5 @@ pygal==3.0.0
 requests==2.25.1
 scipy==1.8.0
 seaborn==0.11.2
+cairosvg==2.5.2
+fpdf==1.7.2
