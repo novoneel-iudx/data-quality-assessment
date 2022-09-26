@@ -872,7 +872,7 @@ outputParamFV = {
 }
 myJSON = json.dumps(outputParamFV, indent = 4)
 filename = fileNameNoExt + "_Report.json"
-jsonpath = os.path.join("../outputReport/", filename)
+jsonpath = os.path.join("../outputReports/", filename)
 
 with open(jsonpath, "w+") as jsonfile:
     jsonfile.write(myJSON)
