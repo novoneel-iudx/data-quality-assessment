@@ -351,6 +351,7 @@ pp.radarChart(regularityMetricScore,
 
 
 def compute_histogram_bins(data, desired_bin_size):
+    import numpy as np
     min_val = np.min(data)
     max_val = np.max(data)
     min_boundary = -1.0 * (min_val % desired_bin_size - min_val)
