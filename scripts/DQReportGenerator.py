@@ -798,7 +798,7 @@ def create_analytics_report(filename=f"{fileNameNoExt}_DQReport.pdf"):
     pdf.ln(5)
     pdf.image("../plots/cardPlot.png",x = 35, y = 180, w = 140)
     
-    pdf.output('../outputReport/' + filename, 'F')
+    pdf.output('../outputReports/' + filename, 'F')
     # pdf.output(fileName, 'F')
 # if __name__ == '__main__':
 #     yesterday = (datetime.today() - timedelta(days=1)).strftime("%m/%d/%y").replace("/0","/").lstrip("0")
